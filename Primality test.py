@@ -25,6 +25,11 @@ def take_user_input():
 
 
 def primality_test(number):
+    """Checks if the given number s prime or not. In case that it is not, it finds divisors and closest prime numbers.
+
+    :param number: A test number.
+    :return: Test outcome. Including divisors and closest prime numbers.
+    """
     x = 1
     factors = [1, number]
     prime = True
@@ -74,7 +79,12 @@ def primality_test(number):
 
 
 def find_prime_number(number, sign=''):
-    prime = 0
+    """Finds the closest prime number to the given composite number.
+
+    :param number: A number from which the search starts.
+    :param sign: if empty the closest prime will be bigger than "number". For the closest prime SMALLER the "number", this param requires a minus.
+    :return: A prime number which is closest to the given number.
+    """
     prime = False
 
     if sign:
